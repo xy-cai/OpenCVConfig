@@ -1,0 +1,36 @@
+﻿<Window x:Class="OpenCVConfig.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <StackPanel Orientation="Horizontal" Margin="0,33,0,231">
+            <TextBlock Text="OpenCV build目录" Margin ="10,0,20,0" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Width="Auto" Height="Auto" RenderTransformOrigin="0.576,0.24"/>
+            <TextBox Name="txtBuildPath" HorizontalAlignment="Left" Margin ="0,0,20,0" Height="25" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="247"/>
+            <Button x:Name="btnClickMe" Width="100" Height="26" Content="浏览" HorizontalAlignment="Right" VerticalAlignment="Center" Click="btnClickMe_Click" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="0,89,0,175">
+            <TextBlock Text="VS工程目录/vcxproj文件" Margin ="0,0,0,0" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Width="Auto" Height="Auto" RenderTransformOrigin="0.576,0.24"/>
+            <TextBox x:Name="txtBuildPath1" HorizontalAlignment="Left" Margin ="0,0,20,0" Height="25" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="247"/>
+            <Button x:Name="btnClickMe1" Width="100" Height="26" Content="浏览" HorizontalAlignment="Right" VerticalAlignment="Center" Click="btnClickMe1_Click" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="0,145,0,119">
+            <TextBlock Text="Opencv版本" Margin="0,0,0,0" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Width="Auto" Height="auto" />
+            <ComboBox x:Name="cmboxOpenCVVer" Width="Auto" Height="25" Margin="5,0,0,0" SelectedIndex="0">
+                <ComboBoxItem Content="2.3.1" HorizontalAlignment="Left" Width="98"/>
+                <ComboBoxItem Content="2.4.3" HorizontalAlignment="Left" Width="98"/>
+                <ComboBoxItem Content="2.4.4" HorizontalAlignment="Left" Width="98"/>
+            </ComboBox>
+            <TextBlock Text="VS版本" Margin="10,0,0,0" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Width="Auto" Height="auto" />
+            <ComboBox x:Name="cmboxVSVer" Width="Auto" Height="25" Margin="5,0,0,0" SelectedIndex="0">
+                <ComboBoxItem Content="VS2010" HorizontalAlignment="left" Width="98"/>
+                <ComboBoxItem Content="VS2012" HorizontalAlignment="left" Width="98"/>
+            </ComboBox>
+            <CheckBox x:Name="checkboxDebug" Content="Debug" Margin="15,0,0,0" VerticalAlignment="Center" IsChecked="True"/>
+            <CheckBox x:Name="checkboxRelease" Content="Release" Margin="10,0,0,0" VerticalAlignment="Center"/>
+            <CheckBox x:Name="checkboxWin32" Content="win32" Margin="20,0,0,0" VerticalAlignment="Center" IsChecked="True" />
+            <CheckBox x:Name="checkboxX64" Content="x64" Margin="10,0,0,0" VerticalAlignment="Center" />
+
+        </StackPanel>
+        <Button x:Name="btnSubmit" Content="配置OpenCV!" HorizontalAlignment="Left" Margin="0,269,0,0" VerticalAlignment="Top" Width="517" Click="btnSubmit_Click" Height="51"/>
+    </Grid>
+</Window>
